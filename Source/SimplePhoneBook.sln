@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B285AC25-99AE-402B-A84A-8B1FF28BD825}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{90F31A7E-78F2-4E2D-8F2D-DE9D2D4D886B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhoneBook.Data", "Data\SimplePhoneBook.Data\SimplePhoneBook.Data.csproj", "{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhoneBook.Data.Models", "Data\SimplePhoneBook.Data.Models\SimplePhoneBook.Data.Models.csproj", "{D7B95FA6-9B3E-4131-885A-D5E90E478BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhoneBook.Data.Common", "Data\SimplePhoneBook.Data.Common\SimplePhoneBook.Data.Common.csproj", "{C13F70E7-35F0-4019-B468-D3BBCD94550E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhoneBook.Web", "Web\SimplePhoneBook.Web\SimplePhoneBook.Web.csproj", "{FCADF0DE-97A2-4238-A2A7-23F4505A08F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EA0BEB6C-3B39-4198-B93C-630B2713C212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhoneBook.Services.Data", "Services\SimplePhoneBook.Services.Data\SimplePhoneBook.Services.Data.csproj", "{42EF8D69-D67A-46C7-9188-6C8F53C0F349}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B95FA6-9B3E-4131-885A-D5E90E478BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B95FA6-9B3E-4131-885A-D5E90E478BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B95FA6-9B3E-4131-885A-D5E90E478BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B95FA6-9B3E-4131-885A-D5E90E478BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13F70E7-35F0-4019-B468-D3BBCD94550E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13F70E7-35F0-4019-B468-D3BBCD94550E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13F70E7-35F0-4019-B468-D3BBCD94550E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13F70E7-35F0-4019-B468-D3BBCD94550E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCADF0DE-97A2-4238-A2A7-23F4505A08F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCADF0DE-97A2-4238-A2A7-23F4505A08F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCADF0DE-97A2-4238-A2A7-23F4505A08F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCADF0DE-97A2-4238-A2A7-23F4505A08F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EF8D69-D67A-46C7-9188-6C8F53C0F349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EF8D69-D67A-46C7-9188-6C8F53C0F349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EF8D69-D67A-46C7-9188-6C8F53C0F349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EF8D69-D67A-46C7-9188-6C8F53C0F349}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B42F6E0F-AF98-4491-82E8-AAE32BBDE1F9} = {90F31A7E-78F2-4E2D-8F2D-DE9D2D4D886B}
+		{D7B95FA6-9B3E-4131-885A-D5E90E478BF9} = {90F31A7E-78F2-4E2D-8F2D-DE9D2D4D886B}
+		{C13F70E7-35F0-4019-B468-D3BBCD94550E} = {90F31A7E-78F2-4E2D-8F2D-DE9D2D4D886B}
+		{FCADF0DE-97A2-4238-A2A7-23F4505A08F6} = {B285AC25-99AE-402B-A84A-8B1FF28BD825}
+		{42EF8D69-D67A-46C7-9188-6C8F53C0F349} = {EA0BEB6C-3B39-4198-B93C-630B2713C212}
+	EndGlobalSection
+EndGlobal

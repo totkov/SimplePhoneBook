@@ -1,0 +1,19 @@
+﻿@using SimplePhoneBook.Web.ViewModels.Home;
+@model ContactViewModel
+@{
+    ViewBag.Title = "Delete contact";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>Are you sure you want to delete contact @Model.FirstName @Model.LastName with id @Model.Id and phone number @Model.PhoneNumber</p>
+
+@using (Html.BeginForm("DeleteConfirmed", "Home", new { id = Model.Id }, FormMethod.Post, null))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group row">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        @Html.ActionLink("Cancel", "Index")
+    </div>
+}

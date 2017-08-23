@@ -1,0 +1,33 @@
+﻿@using SimplePhoneBook.Web.ViewModels.Home;
+@model ContactDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h3>@Model.FirstName @Model.LastName</h3>
+    <h4>@Model.PhoneNumber</h4>
+    <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>@Model.Description</td>
+        </tr>
+        <tr>
+            <td>Created on</td>
+            <td>@DateTime.Parse(Model.CreatedOn.ToString()).ToLocalTime().ToString()</td>
+        </tr>
+        @if (Model.ModifiedOn != null)
+        {
+            <tr>
+                <td>Last modifide</td>
+                <td>@DateTime.Parse(Model.ModifiedOn.ToString()).ToLocalTime().ToString()</td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,46 @@
+﻿@using SimplePhoneBook.Web.ViewModels.Home;
+@model IndexViewModel
+@{
+    ViewBag.Title = "My contacts";
+    var contacts = Model.Contacts;
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (TempData["SuccessMsg"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success!</strong> @TempData["SuccessMsg"]
+    </div>
+}
+
+@Html.ActionLink("Add new contact", "Add")
+
+@if (contacts != null && contacts.Count() > 0)
+{
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var contact in contacts)
+        {
+            <tr>
+                <td>@contact.FirstName @contact.LastName</td>
+                <td>@contact.PhoneNumber</td>
+                <td>
+                    @Html.ActionLink("Select", "Details", new { id = contact.Id }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = contact.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = contact.Id })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="row">
+        <p>You have no saved contacts.</p>
+    </div>
+}
