@@ -37,6 +37,8 @@
             </tr>
         }
     </table>
+
+    {Html.RenderPartial("/Views/Shared/GenericPager.cshtml", Model.ContactsPager);}
 }
 else
 {

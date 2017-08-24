@@ -1,9 +1,11 @@
 ﻿namespace SimplePhoneBook.Web.Controllers
 {
+    using System;
     using System.Linq;
     using System.Web.Mvc;
 
     using SimplePhoneBook.Web.ViewModels.Home;
+    using SimplePhoneBook.Web.ViewModels.Shared;
     using SimplePhoneBook.Data.Models;
     using SimplePhoneBook.Services.Data.Contracts;
 
@@ -15,14 +17,16 @@
         {
             this.contacts = contacts;
         }
-
-        [HttpGet]
-        public ActionResult Index()
+        
+        public ActionResult Index(IndexViewModel model)
         {
-            IndexViewModel model = new IndexViewModel
-            {
-                Contacts = contacts
-                    .AllContacts()
+            model.ContactsPager = model.ContactsPager ?? new PagerViewModel();
+            model.ContactsPager.ItemsPerPage = model.ContactsPager.ItemsPerPage == 0 ? 5 : model.ContactsPager.ItemsPerPage;
+            model.ContactsPager.PagesCount = (int)Math.Ceiling((double)this.contacts.Count() / model.ContactsPager.ItemsPerPage);
+            model.ContactsPager.Prefix = "ContactsPager";
+
+            model.Contacts = this.contacts
+                    .AllContacts(model.ContactsPager.CurrentPage, model.ContactsPager.ItemsPerPage)
                     .Select(c => new ContactViewModel
                     {
                         Id = c.Id,
@@ -30,8 +34,7 @@
                         LastName = c.LastName,
                         PhoneNumber = c.PhoneNumber
                     })
-                    .ToList()
-            };
+                    .ToList();
             return View(model);
         }
 

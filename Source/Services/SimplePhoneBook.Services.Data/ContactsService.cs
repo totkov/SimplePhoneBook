@@ -18,14 +18,27 @@
             this.uof = uof;
         }
 
-        public IQueryable<Contact> AllContacts()
+        public IQueryable<Contact> AllContacts(int? page = null, int? pageSize = null)
         {
-            return this.contacts.All();
+            IQueryable<Contact> query = this.contacts.All();
+            if (page != null && pageSize != null)
+            {
+                query = query
+                    .OrderBy(i => i.Id)
+                    .Skip(page.Value * pageSize.Value)
+                    .Take(pageSize.Value);
+            }
+            return query.AsQueryable();
         }
 
         public Contact GetById(int id)
         {
             return this.contacts.GetById(id);
+        }
+        
+        public int Count()
+        {
+            return this.contacts.All().Count();
         }
 
         public void Add(Contact contact)

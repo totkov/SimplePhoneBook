@@ -6,9 +6,11 @@
 
     public interface IContactsService
     {
-        IQueryable<Contact> AllContacts();
+        IQueryable<Contact> AllContacts(int? page = null, int? pageSize = null);
 
         Contact GetById(int id);
+
+        int Count();
 
         void Add(Contact contact);
 

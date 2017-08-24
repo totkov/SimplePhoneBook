@@ -63,5 +63,10 @@
             var entry = this.context.Entry(entity);
             entry.State = EntityState.Modified;
         }
+
+        public int Count()
+        {
+            return this.dbSet.Count();
+        }
     }
 }

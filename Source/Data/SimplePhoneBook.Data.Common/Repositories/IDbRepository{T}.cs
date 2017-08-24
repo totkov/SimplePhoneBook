@@ -12,6 +12,8 @@
 
         T GetById(object id);
 
+        int Count();
+
         void Add(T entity);
 
         void Delete(T entity);

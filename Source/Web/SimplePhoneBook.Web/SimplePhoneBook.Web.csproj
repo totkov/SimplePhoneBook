@@ -161,6 +161,7 @@
     <Compile Include="ViewModels\Home\ContactViewModel.cs" />
     <Compile Include="ViewModels\Home\EditContactViewModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
+    <Compile Include="ViewModels\Shared\PagerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -199,6 +200,7 @@
     <Content Include="Views\Home\Add.cshtml" />
     <Content Include="Views\Home\Delete.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Shared\GenericPager.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
